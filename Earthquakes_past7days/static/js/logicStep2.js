@@ -19,7 +19,7 @@ let baseMaps = {
     "Satellite": satelliteStreets
   };
   
-// Create the map object with center being Toronto, zoom level and default layer.
+// Create the map object with center being US, zoom level and default layer.
 let map = L.map('mapid', {
     center:[39.5, -98.5],
     zoom: 3,
@@ -29,7 +29,7 @@ let map = L.map('mapid', {
 // Pass our map layers into our layers control and add the layers control to the map.
 L.control.layers(baseMaps).addTo(map);
 
-// Accessing the Toronto neighborhoods GeoJSON URL.
+// Accessing the Earthquakes for the last 7 days GeoJSON URL.
 let earthQuakes = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
 // This function returns the style data for each of the earthquakes we plot on the map.
